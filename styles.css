@@ -1,4 +1,3 @@
-/* Import digital style font */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 
 * {
@@ -7,45 +6,55 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  height: 100%;
   font-family: 'Orbitron', sans-serif;
   background: linear-gradient(135deg, #f0f0f3, #d6d6de);
   color: #111;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-  width: 160px;
-  max-width: 50vw;
+  width: 140px;
+  max-width: 60vw;
   margin-bottom: 2rem;
   mix-blend-mode: multiply;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .clock #time {
-  font-size: 12vw;
+  font-size: 14vw;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   color: #111;
   margin-bottom: 1rem;
+  word-break: break-word;
 }
 
 .clock #date,
 .clock #week {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #444;
   margin-top: 0.5rem;
+  padding: 0 1rem;
 }
 
 footer {
   font-size: 0.9rem;
-  padding: 10px;
+  padding: 1rem;
   color: #555;
   width: 100%;
   text-align: center;
@@ -61,8 +70,29 @@ footer a:hover {
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
   .clock #time {
-    font-size: 24vw;
+    font-size: 18vw;
+  }
+
+  .clock #date,
+  .clock #week {
+    font-size: 1rem;
+  }
+
+  .logo {
+    width: 120px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .clock #time {
+    font-size: 22vw;
+  }
+
+  footer {
+    font-size: 0.8rem;
   }
 }
