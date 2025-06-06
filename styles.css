@@ -1,0 +1,68 @@
+/* Import digital style font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #f0f0f3, #d6d6de);
+  color: #111;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.logo {
+  width: 160px;
+  max-width: 50vw;
+  margin-bottom: 2rem;
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+}
+
+.clock #time {
+  font-size: 12vw;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.clock #date,
+.clock #week {
+  font-size: 1.5rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+footer {
+  font-size: 0.9rem;
+  padding: 10px;
+  color: #555;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+footer a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .clock #time {
+    font-size: 24vw;
+  }
+}
